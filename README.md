@@ -10,7 +10,8 @@ O problema estava na grande quantidade de listas criadas dentro do HTML que pode
 
 ## Solução
 
-Com o ngFor, foi possível reutilizar os elementos DOM da lista de dados no HTML. O ngFor tenta evitar a constante criação e destruição de elementos DOM e com isso, muitos dos elementos DOM existentes serão reutilizados e somente os valores dentro deles serão sobrescritos. Para implementar o ngFor, foram criadas classes externas (para não precisar repetir as classes em cada página) contendo os valores das listas de dados, podendo então chamar essas classes em cada página e compartilhar seus dados por um “import”. No HTML, os elementos reutilizados foram os 
+Com o ngFor, foi possível reutilizar os elementos DOM da lista de dados no HTML. O ngFor tenta evitar a constante criação e destruição de elementos DOM e com isso, muitos dos elementos DOM existentes serão reutilizados e somente os valores dentro deles serão sobrescritos. Para implementar o ngFor, foram criadas classes externas (para não precisar repetir as classes em cada página) contendo os valores das listas de dados, podendo então chamar essas classes em cada página e compartilhar seus dados por um “import”. No HTML, os elementos reutilizados foram:
+
 ```
 <ion-card>
 ```
@@ -18,7 +19,7 @@ Com o ngFor, foi possível reutilizar os elementos DOM da lista de dados no HTML.
 <ion-list>
 ```
 ```
-<ion- item>
+<ion-item>
 ```
 
 Redução de 495 linhas!
