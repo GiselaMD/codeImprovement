@@ -1,0 +1,58 @@
+<ion-header>
+  
+  <ion-navbar color="primary">
+    <ion-title> {{title}} </ion-title>
+    <ion-buttons end>
+      <button (click)="openModal()" class="showHeaderResumo" ion-button float-right>Resumo</button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            
+          </ion-col>
+          <ion-col >
+              <button ion-button icon-right (focus)='apagarHPJ()'>
+                Limpar Dados
+                <ion-icon name="trash"></ion-icon>
+              </button>
+          </ion-col>
+          <ion-col>
+            
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  <ion-card *ngFor="let card of honorariosProjCardList; let i = index">
+    <ion-card-header text-wrap text-justify (click)="toggleGroup(i,card.cardId)" id={{card.cardId}}>
+      <ion-item color="secondaryDark">
+        <ion-label fixed class='label0' text-wrap> {{ card.title }} </ion-label> 
+        <ion-label class='headerIconLabel' text-end><ion-icon float-left id={{card.cardId}}ICON name='ios-arrow-forward' class='dropdownHonorarios'></ion-icon></ion-label>
+      </ion-item>
+    </ion-card-header>
+    <span *ngIf="shouldDisplayGroupContent[i]">
+      <ion-list inset class="ion-list-honorarios" *ngFor="let honorarioTopic of card.hnrContent;let j = index">
+        <ion-item color="secondaryLight" (click)="toggleItem(i*25+j,card.cardId+honorarioTopic.itemId)" id={{card.cardId+honorarioTopic.itemId}}>
+          <ion-label fixed class='label0' text-wrap> {{ honorarioTopic.topic }} </ion-label> 
+          <ion-label text-end><ion-icon float-left [name]="shouldDisplayInputsForGroup[i * 25 + j] ? 'ios-remove-circle-outline' : 'ios-add-circle-outline'"  class='dropdownHonorarios' id={{card.cardId+honorarioTopic.itemId}}ICONEL></ion-icon></ion-label>
+        </ion-item>
+        <span *ngFor="let item of honorarioTopic.items;let k = index">
+          <ion-item *ngIf="shouldDisplayInputsForGroup[i * 25 + j]" id={{card.cardId+honorarioTopic.itemId+item.valueId}}>
+            <ion-label class='label1'>{{item.description}}</ion-label>
+            <ion-input text-right elastic type="tel" [(ngModel)]='honorariosProjCardList[i].hnrContent[j].items[k].formattedValue' elastic (change)='updateAmount($event.target.value, i, j, k)' (keyup)='updateAmount($event.target.value, i , j , k)' (blur)='fixAmount($event.target.value, i , j , k, card.cardId+honorarioTopic.itemId+item.valueId)'></ion-input>
+          </ion-item>
+        </span>
+      </ion-list>
+    </span>
+  </ion-card>
+  <ion-card *ngFor="let card of honorariosProjCardTotal; let i = index">
+    <ion-card-header text-wrap text-justify (click)="openModal()" id={{card.cardId}}>
+      <ion-item color="primaryLight">
+        <ion-label text-center> {{ card.title }} </ion-label>
+      </ion-item>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

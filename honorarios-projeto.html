@@ -1,0 +1,554 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Honorários Projeto </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-title>Projeto: </ion-title>
+  <!-- Modal -->
+  <ion-card (click)="toggleGroup()">
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      1. REUNIÃO - Primeiro encontro com o cliente, APRESENTAÇÃO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios" *ngIf="!content" >
+      <ion-item>
+        <ion-label text-wrap>Apresentar-se</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Apresentar o portifólio</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Conhecer o cliente</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Identificar o perfil do cliente</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Identificar as necessicdades para elaborar o programa de necessidades</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Identificar a faixa de orçamento a ser trabalhada</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Identificar as expectativas do cliente para o projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Conhecer o espaço</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Identificar os elementos a serem mantidos, substiruídos ou "adquiridos"</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Identificar as dificuldades a serem encontradas</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Registrar os dados pessoais do cliente</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Explicar a forma de trabalho e de cobrança dos honorários profissionais</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Combinar a data para entrega da proposta de trabalho e honorários profissionais para projeto</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      2. ESCRITÓRIO - Elaborar PROPOSTA de trabalho e honorários profissionais para PROJETO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Estabelecer o programa de necessidades</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Definir o ESCOPO de trabalho para projeto, os itens a serem entregues</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Discutir a necessidade de assessorias complementares para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Verificar normas técnicas e a necessidade de legislação específica de aprovação para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Verificar a viabilidade para alterações em edificações listadas e/ou tombadas</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Identificar o autor do projeto original</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Definir o CRONOGRAMA para entrega de etapas para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Fazer o levantamento do Tempo de Produção/ Horas (H) a serem utilizadas para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Prever os RISCOS</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Formalizar a PROPOSTA para projeto</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      3. REUNIÃO - Segundo encontro com o cliente, apresentar a PROPOSTA
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Entregar a PROPOSTA de trabalho e honorários profissionais para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Explicar a PROPOSTA, os termos do futuro contrato e a forma de pagamento de honorários profissionais para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Assinar a PROPOSTA para a etapa: estudo preliminar; anteprojeto ou projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Definir as assessorias complementares para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Combinar o gerenciamento das alterações para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Apresentar imagens e fotos de trabalhos anteriores</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      4. ESCRITÓRIO - Elaborar CONTRATO de trabalho e honorários profissionais para PROJETO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Formalizar a proposta em termos de CONTRATO de trabalho e honorários profissionais para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar a RRT CAU  para a etapa: estudo preliminar; anteprojeto ou projeto</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      5. REUNIÃO - Terceiro encontro com o cliente, apresentar o CONTRATO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Entregar e apresentar o CONTRATO para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Assinar o CONTRATO</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Assinar a RRT CAU para a etapa: estudo preliminar, anteprojeto ou projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Receber parcela de honorários profissionais</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Estabelecer a contratação de assessorias complementares para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Definir e aprovar o programa de necessidades para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Combinar as formas e os horários para comunicação</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Explicar o gerenciamento das aquisições para execução</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Solicitar as plantas dos projetos, caso seja edificação nova ou em construção</ion-label>
+      </ion-item>
+      
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      6. OBRA - Levantamento do espaço físico para PROJETO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Medir o espaço</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Fotografar o espaço</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Medir mobiliários e equipamentos, na obra ou em outros locais</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Fazer Vistoria Inicial ao local e entorno para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar Termo de Vistoria - MOU</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      7. ESCRITÓRIO - Pesquisar e elaborar para CONCEPÇÃO para PROJETO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Pesquisar tendências</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Pesquisar materiais</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Pesquisar sobre o estilo de vida do cliente</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Pesquisar sobre alternativas para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Pesquisar normas técnicas e a necessidade de legislação específica de aprovação para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Informar ao autor do projeto original da contratação para a intervenção no espaço</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      8. ESCRITÓRIO - Elaborar o ESTUDO PRELIMINAR e/ou o ANTEPROJETO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Elaborar plantas do levantamento</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Estabelecer o cumprimento às normas técnicas e legislações para aprovação para projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar o programa de necessidades</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Desenvolver o ESTUDO PRELIMINAR e/ou o ANTEPROJETO</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Desenvolver as vistas</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Desenvolver as perspectivas</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      9. LOJAS E ESCRITÓRIO - Escolher MATERIAIS e TECNOLOGIAS
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Visitar lojas e fornecedores para especificações </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Adequar a escolha dos materiais e tecnologias ao projeto</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      10. ESCRITÓRIO - Elaborar ORÇAMENTO ESTIMATIVO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Pesquisar valores de todos os itens do ESCOPO previsto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar planilha de ORÇAMENTO ESTIMATIVO de acordo com o ESCOPO previsto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Definir honorários profissionais para assessorias complementares para projeto</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      11. ESCRITÓRIO - Elaborar APRESENTAÇÃO do ESTUDO PRELIMINAR e/ou o ANTEPROJETO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Finalizar a elaboração das plantas, vistas e perspectivas</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Imprimir e/ou plotar o projeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar maquete eletrônica</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Imprimir a planilha de ORÇAMENTO ESTIMATIVO</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      12. REUNIÃO - Quarto encontro com o cliente – Apresentar ESTUDO PRELIMINAR e/ou o ANTEPROJETO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Apresentar e aprovar o estudo preliminar e/ou anteprojeto</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Apresentar amostras de materiais</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Apresentar e aprovar ORÇAMENTO ESTIMATIVO</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Estabelecer a contratação de assessorias complementares para projeto</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      13. ESCRITÓRIO - Desenvolver o projeto EXECUTIVO - detalhamentos
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto para a execução dos serviços</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Fornecer projeto de pontos para instalações às assessorias complementares contratadas</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto de alvenarias, demolições e construções</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto com distribuição e especificação de pontos elétricos</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto com distribuição e especificação de pontos hidráulicos</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto com distribuição de pontos de telefonia e lógica</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto com definição e especificação de sistema de condicionamento térmico</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto de forros e luminotécnica</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto com detalhamentos de revestimentos e especificar materiais</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto de detalhamento de mobiliário sob medida</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar listagem e especificação de mobiliários prontos e equipamentos</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Programar a compatibilização dos projetos complementares contratados</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Revisar a planilha do orçamento estimativo, conforme escopo aprovado pelo cliente</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Desenvolver maquete eletrônica</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar projeto para aprovação junto aos órgãos públicos</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label text-wrap>Elaborar PROJETO EXECUTIVO - detalhamentos para apresentação ao cliente</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar apresentação de conjunto de projetos complementares contratados</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      14. ESCRITÓRIO - Elaborar o MANUAL DE ORIENTAÇÃO DO USUÁRIO - MOU com Memorial Descritivo
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Elaborar planilha para o Memorial Descritivo para projeto </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar Termo de Recebimento para projeto </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Elaborar Termo de Recebimento do MOU </ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header text-wrap style="background-color:#488aff" color="light">
+      15. REUNIÕES - Quinto, sexto e sétimo encontros com o cliente, apresentar o PROJETO EXECUTIVO
+    </ion-card-header>
+
+    <ion-list inset class="ion-list-honorarios">
+      <ion-item>
+        <ion-label text-wrap>Apresentar o PROJETO EXECUTIVO e aprovar os detalhamentos</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Apresentar e aprovar o Memorial Descritivo - MOU</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Apresentar e aprovar a revisão da planilha de orçamento estimativo</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label text-wrap>Assinar Termo de Recebimento para projeto e MOU</ion-label>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="openModal()"> Calcular despesas </button>
+  </ion-card>
+
+</ion-content>
+<ion-footer class='footer'>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item class='bottomItems'>
+          <ion-label><strong>Deslocamento:</strong></ion-label>
+          <ion-input typeof="number" value="0,00" disabled='true'> </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class='bottomItems'>
+          <ion-label><strong>Hora Arquiteto:</strong></ion-label>
+          <ion-input typeof="number" value="0,00" disabled='true'> </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class='bottomItems'>
+          <ion-label><strong>Hora Escritório:</strong></ion-label>
+          <ion-input typeof="number" value="0,00" disabled='true'> </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class='bottomItems'>
+          <ion-label><strong>Hora Estagiário:</strong></ion-label>
+          <ion-input typeof="number" value="0,00" disabled='true'> </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

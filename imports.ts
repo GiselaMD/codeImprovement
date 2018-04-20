@@ -1,0 +1,9 @@
+import { VALOR_HORA_CARD_TOTAL } from './../../classes/valor-hora_soma';
+import { VALOR_HORA_CARD_LIST } from '../../classes/valor-hora';
+import { HONORARIOS_EXEC_CARD_TOTAL } from './../../classes/honorariosExec_soma';
+import { HONORARIOS_EXEC_CARD_LIST } from './../../classes/honorariosExec';
+import { HONORARIOS_PROJ_CARD_LIST } from './../../classes/honorariosProj';
+import { HONORARIOS_PROJ_CARD_TOTAL } from '../../classes/honorariosProj_soma';
+import { VALOR_HORA_HNR_TOTAL } from "../../classes/valor-hora_honorarios";
+import { HCard } from './../../models/hcard.interface';
+import { VHCard } from '../../models/vhcard.interface';
